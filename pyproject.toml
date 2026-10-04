@@ -1,6 +1,16 @@
 [project]
 name = "domain-contract-0910031-018"
-version = "0.1.0"
-description = "供应商交付承诺的领域约定与校验工具"
+version = "0.2.0"
+description = "供应商交付承诺：采购行、产能窗口、承诺版本链与缺口责任服务"
 requires-python = ">=3.11"
 dependencies = []
+
+[project.scripts]
+commitment-server = "commitment.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
